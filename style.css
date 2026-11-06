@@ -17,6 +17,9 @@ body{
     justify-items: center;
 }
 .card{
+    transition: transform 0.3s ease;
+    cursor: pointer;
+
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
     margin: 15px 0;
@@ -28,7 +31,12 @@ body{
     box-sizing: border-box;
     border-radius: 12px;
     text-align: center;
-    box-shadow: 0 3px 10px rgba(59, 55, 55, 0.2);;
+    box-shadow: 0 3px 10px rgba(59, 55, 55, 0.2);
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(59, 55, 55, 0.3);
+   
 }
 .header{
     position: static;
@@ -111,7 +119,7 @@ h2{
 }
 .pergunta{
     width: 0;
-    width-space: nowrap;
+    white-space: nowrap;
     overflow: hidden;
     font-family: 'Roboto', sans-serif;
     font-size: 30px;        
@@ -121,7 +129,7 @@ h2{
     position: relative;
     top: 10px;
     left: 0;
-    animation: escrever 3s steps(25) forwards;
+    animation: escrever 4s steps(20) forwards;
     border-right: 3px solid #000000;
 
 
@@ -133,6 +141,8 @@ h2{
     }
     
     
+    
 }   
+
 
 
