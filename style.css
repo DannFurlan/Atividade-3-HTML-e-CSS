@@ -135,4 +135,168 @@ h2{
     
 }   
 
-
+body{
+    margin: 0;
+    background-color: #1f232b;
+    color: #e5e7eb;
+    font-family: 'Roboto', sans-serif;
+}
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #2b303b;
+    height: auto;
+    padding: 18px 16px;
+    border-bottom: 4px solid #B7F000;
+    border-radius: 0px 0px 12px 12px;
+}
+.header h1{
+    font-family: 'Sora', sans-serif;
+    font-size: 2.2em;
+    margin: 0;
+    border-bottom: none;
+    text-align: center;
+    color: #f3f4f6;
+}
+h2{
+    font-family: 'Sora', sans-serif;
+    font-size: 26px;
+}
+body > h2:not(.pergunta){
+    text-align: center;
+    margin: 30px 0 10px;
+    padding: 0 20px;
+}
+.pergunta{
+    white-space: nowrap;
+    margin: 20px 0 10px;
+    color: #B7F000;
+    border-right: 3px solid #B7F000;
+}
+.produtos{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    box-sizing: border-box;
+    gap: 20px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: #2b303b;
+    border: 1px solid #3a4150;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.4);
+}
+.imagem{
+    flex-shrink: 0;
+    object-fit: contain;
+    background-color: #f3f4f6;
+    border-radius: 8px;
+}
+.card h3{
+    text-transform: capitalize;
+    color: #f3f4f6;
+    font-weight: 600;
+}
+.descricao::first-letter{
+    text-transform: uppercase;
+}
+.beneficios li{
+    padding: 3px 0;
+    color: #d1d5db;
+}
+.beneficios li::before{
+    content: "✓ ";
+    color: #B7F000;
+    font-weight: bold;
+}
+.preco{
+    margin-top: auto;
+    padding-top: 10px;
+    border-top: 1px solid #3a4150;
+}
+body > p{
+    text-align: center;
+    font-size: 18px;
+    color: #cbd5e1;
+    margin: 30px auto 10px;
+    padding: 0 20px;
+}
+body > a{
+    display: block;
+    width: fit-content;
+    margin: 10px auto 40px;
+    padding: 12px 24px;
+    background-color: #B7F000;
+    color: #1f232b;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+}
+body > a:hover{
+    background-color: #cbff2e;
+}
+a:focus-visible{
+    outline: 3px solid #f3f4f6;
+    outline-offset: 3px;
+}
+body > div:not(.produtos), body > ol{
+    width: calc(100% - 32px);
+    max-width: 760px;
+    margin: 24px auto;
+    padding: 24px;
+    box-sizing: border-box;
+    background-color: #2b303b;
+    border: 1px solid #3a4150;
+    border-radius: 12px;
+}
+body > ol{
+    padding-left: 48px;
+    line-height: 1.8;
+    color: #d1d5db;
+}
+body > div:not(.produtos) h2{
+    margin-top: 0;
+    text-align: left;
+    color: #B7F000;
+}
+body > div:not(.produtos) h3{
+    font-family: 'Sora', sans-serif;
+    color: #f3f4f6;
+    margin: 24px 0 10px;
+}
+body > div:not(.produtos) p{
+    line-height: 1.6;
+    color: #d1d5db;
+}
+body > div:not(.produtos) img{
+    display: block;
+    max-width: 100%;
+    margin: 12px 0;
+    border-radius: 8px;
+}
+body > div:not(.produtos) ul{
+    line-height: 1.8;
+    color: #d1d5db;
+}
+body > ol li::marker, body > div:not(.produtos) li::marker{
+    color: #B7F000;
+}
+@media (max-width: 900px){
+    .produtos{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px){
+    .produtos{
+        grid-template-columns: 1fr;
+    }
+    .header h1{
+        font-size: 1.6em;
+    }
+}
